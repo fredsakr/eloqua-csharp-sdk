@@ -3,8 +3,6 @@ Eloqua SDK for .NET
 A software development kit for .NET that helps developers build applications that integrate with Eloqua.
 
 ## Bulk Client
-Usage
-
 ### Create Client
 	var info = BulkClient.GetAccountInfo(site, user, password);
 	var client = new BulkClient(site, user, password, Helpers.BulkEndpoint(info));
