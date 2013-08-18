@@ -14,7 +14,7 @@ namespace Eloqua.Api.Bulk.Tests.Contacts
         {
             var accountInfo = BulkClient.GetAccountInfo(Constants.Site, Constants.User, Constants.Passwd);
 
-            _client = new BulkClient(Constants.Site, Constants.User, Constants.Passwd, Helpers.CurrentApiVersion(accountInfo));
+            _client = new BulkClient(Constants.Site, Constants.User, Constants.Passwd, Helpers.BulkEndpoint(accountInfo));
         }
 
         [Test]
