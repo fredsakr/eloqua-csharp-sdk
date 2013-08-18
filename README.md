@@ -9,7 +9,7 @@ Currently contains clients for the Bulk API.
 	var client = new BulkClient(site, user, password, info.Urls.Apis.Rest.Bulk);
 
 ### GET (list)
-	List<ContactFilter> filters = _client.ContactFilters.Search("*", 1, 1);
+	List<ContactFilter> filters = _client.ContactFilters.Search(searchTerm, page, count);
 
 ### Contact Export
 	Export export = new Export
