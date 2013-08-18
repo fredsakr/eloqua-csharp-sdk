@@ -1,8 +1,9 @@
 Eloqua SDK for .NET
 =================
 A software development kit for .NET that helps developers build applications that integrate with Eloqua.
+Currently contains clients for the Bulk API.
 
-## Bulk Client
+## Bulk Client Project
 ### Create Client
 	var info = BulkClient.GetAccountInfo(site, user, password);
 	var client = new BulkClient(site, user, password, Helpers.BulkEndpoint(info));
@@ -10,8 +11,38 @@ A software development kit for .NET that helps developers build applications tha
 ### GET (list)
 	List<ContactFilter> filters = _client.ContactFilters.Search("*", 1, 1);
 
+### Contact Export
+	Export export = new Export
+	{
+		name = "sample export",
+		fields = fields,
+		filter = filter,
+		secondsToAutoDelete = 3600,
+		secondsToRetainData = 3600,
+		syncActions = new List<SyncAction>
+						{
+							new SyncAction
+								{
+									action = SyncActionType.add,
+									destinationUri = destinationUri
+								}
+						}
+	};
+
+	var exportResult = client.ContactExport.CreateExport(export);
+
+	Sync sync = new Sync
+				{
+					status = SyncStatusType.pending,
+					syncedInstanceUri = exportResult.uri
+				};
+	var syncResult = _client.ContactExport.CreateSync(sync);
+
+	var data = _client.ContactExport.GetExportData(exportResult.uri);
+
+
 ## License
-	Copyright [2012] [Fred Sakr]
+	Copyright [2013] [Fred Sakr]
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
