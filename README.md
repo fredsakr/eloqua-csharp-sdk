@@ -1,8 +1,5 @@
-eloqua-csharp-sdk
-=================
-
 Eloqua SDK for .NET
-
+=================
 A software development kit for Eloqua that helps developers build applications that integrate with Eloqua.
 
 ## Usage
