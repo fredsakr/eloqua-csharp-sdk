@@ -5,8 +5,8 @@ A software development kit for Eloqua that helps developers build applications t
 ## Usage
 
 ### Create Client
-	var info = BulkClient.GetAccountInfo(Constants.Site, Constants.User, Constants.Passwd);
-	var client = new BulkClient(Constants.Site, Constants.User, Constants.Passwd, Helpers.CurrentApiVersion(info));
+	var info = BulkClient.GetAccountInfo(site, user, password);
+	var client = new BulkClient(site, user, password, Helpers.CurrentApiVersion(info));
 
 ### GET (list)
 	List<ContactFilter> filters = _client.ContactFilters.Search("*", 1, 1);
