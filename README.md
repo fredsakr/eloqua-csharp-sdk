@@ -1,12 +1,13 @@
 Eloqua SDK for .NET
 =================
-A software development kit for Eloqua that helps developers build applications that integrate with Eloqua.
+A software development kit for .NET that helps developers build applications that integrate with Eloqua.
 
-## Usage
+## Bulk Client
+Usage
 
 ### Create Client
 	var info = BulkClient.GetAccountInfo(site, user, password);
-	var client = new BulkClient(site, user, password, Helpers.CurrentApiVersion(info));
+	var client = new BulkClient(site, user, password, Helpers.BulkEndpoint(info));
 
 ### GET (list)
 	List<ContactFilter> filters = _client.ContactFilters.Search("*", 1, 1);
