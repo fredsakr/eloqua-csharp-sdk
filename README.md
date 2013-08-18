@@ -6,7 +6,7 @@ Currently contains clients for the Bulk API.
 ## Bulk Client Project
 ### Create Client
 	var info = BulkClient.GetAccountInfo(site, user, password);
-	var client = new BulkClient(site, user, password, Helpers.BulkEndpoint(info));
+	var client = new BulkClient(site, user, password, info.Urls.Apis.Rest.Bulk);
 
 ### GET (list)
 	List<ContactFilter> filters = _client.ContactFilters.Search("*", 1, 1);
