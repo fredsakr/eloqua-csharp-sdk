@@ -19,14 +19,6 @@ Currently contains clients for the Bulk API.
 		filter = filter,
 		secondsToAutoDelete = 3600,
 		secondsToRetainData = 3600,
-		syncActions = new List<SyncAction>
-						{
-							new SyncAction
-								{
-									action = SyncActionType.add,
-									destinationUri = destinationUri
-								}
-						}
 	};
 
 	var exportResult = client.ContactExport.CreateExport(export);
