@@ -47,6 +47,10 @@
     <Compile Include="Authentication\BasicAuthentication.cs" />
     <Compile Include="BaseClient.cs" />
     <Compile Include="BulkClient.cs" />
+    <Compile Include="Clients\Accounts\AccountExportClient.cs" />
+    <Compile Include="Clients\Accounts\AccountFieldClient.cs" />
+    <Compile Include="Clients\Accounts\AccountFilterClient.cs" />
+    <Compile Include="Clients\Accounts\AccountImportClient.cs" />
     <Compile Include="Clients\Contacts\ContactExportClient.cs" />
     <Compile Include="Clients\Contacts\ContactFieldClient.cs" />
     <Compile Include="Clients\Contacts\ContactFilterClient.cs" />
@@ -55,6 +59,7 @@
     <Compile Include="Clients\CustomObjects\CustomObjectExportClient.cs" />
     <Compile Include="Clients\CustomObjects\CustomObjectImportClient.cs" />
     <Compile Include="Exception\ValidationException.cs" />
+    <Compile Include="Models\Accounts\AccountFilter.cs" />
     <Compile Include="Models\Contacts\ContactFilter.cs" />
     <Compile Include="Clients\CustomObjects\CustomObjectFieldClient.cs" />
     <Compile Include="Models\CustomObjects\CustomObject.cs" />

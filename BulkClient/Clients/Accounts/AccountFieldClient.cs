@@ -1,13 +1,13 @@
 ﻿using RestSharp;
 using Eloqua.Api.Bulk.Models;
 
-namespace Eloqua.Api.Bulk.Clients.Contacts
+namespace Eloqua.Api.Bulk.Clients.Accounts
 {
-    public class ContactFieldClient
+    public class AccountFieldClient
     {
         readonly BaseClient _client;
 
-        public ContactFieldClient(BaseClient client)
+        public AccountFieldClient(BaseClient client)
         {
             _client = client;
         }
@@ -16,7 +16,7 @@ namespace Eloqua.Api.Bulk.Clients.Contacts
         {
             var request = new RestRequest(Method.GET)
             {
-                Resource = string.Format("/contact/fields?search={0}&page={1}&pageSize={2}", searchTerm, page, pageSize)
+                Resource = string.Format("/account/fields?search={0}&page={1}&pageSize={2}", searchTerm, page, pageSize)
             };
 
             return _client.Execute<SearchResponse<Field>>(request);

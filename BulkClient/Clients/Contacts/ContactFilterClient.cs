@@ -1,7 +1,7 @@
-﻿using Eloqua.Api.Bulk.Models.Contacts;
-using RestSharp;
+﻿using RestSharp;
 using System.Collections.Generic;
 using Eloqua.Api.Bulk.Models;
+using Eloqua.Api.Bulk.Models.Contacts;
 
 namespace Eloqua.Api.Bulk.Clients.Contacts
 {

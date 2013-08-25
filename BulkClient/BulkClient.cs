@@ -1,7 +1,8 @@
-﻿using Eloqua.Api.Bulk.Clients.Contacts;
+﻿using RestSharp;
+using Eloqua.Api.Bulk.Clients.Accounts;
+using Eloqua.Api.Bulk.Clients.Contacts;
 using Eloqua.Api.Bulk.Clients.CustomObjects;
 using Eloqua.Api.Bulk.Models.Login;
-using RestSharp;
 
 namespace Eloqua.Api.Bulk
 {
@@ -19,6 +20,8 @@ namespace Eloqua.Api.Bulk
         }
 
         protected BaseClient BaseClient;
+
+        #region contacts
 
         public ContactFieldClient ContactFields
         {
@@ -40,14 +43,49 @@ namespace Eloqua.Api.Bulk
             get { return new ContactImportClient(BaseClient); }
         }
 
+        #endregion
+
+        #region custom objects
+
         public CustomObjectFieldClient CustomObjectFields
         {
             get { return new CustomObjectFieldClient(BaseClient); }
+        }
+
+        public CustomObjectExportClient CustomObjectExport
+        {
+            get { return new CustomObjectExportClient(BaseClient); }
         }
 
         public CustomObjectImportClient CustomObjectImport
         {
             get { return new CustomObjectImportClient(BaseClient); }
         }
+
+        #endregion
+
+        #region accounts
+
+        public AccountFieldClient AccountFields
+        {
+            get { return new AccountFieldClient(BaseClient); }
+        }
+
+        public AccountFilterClient AccountFilters
+        {
+            get { return new AccountFilterClient(BaseClient); }
+        }
+
+        public AccountExportClient AccountExport
+        {
+            get { return new AccountExportClient(BaseClient); }
+        }
+
+        public AccountImportClient AccountImport
+        {
+            get { return new AccountImportClient(BaseClient); }
+        }
+
+        #endregion
     }
 }
