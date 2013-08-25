@@ -1,10 +1,11 @@
-﻿using Eloqua.Api.Bulk.Models;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using Eloqua.Api.Bulk.Models;
 
-namespace Eloqua.Api.Bulk.Tests.Contacts
+
+namespace Eloqua.Api.Bulk.Tests.CustomObjects
 {
     [TestFixture]
-    public class ContactFieldTests
+    public class CustomObjectFieldTests
     {
         private BulkClient _client;
 
@@ -19,7 +20,7 @@ namespace Eloqua.Api.Bulk.Tests.Contacts
         [Test]
         public void GetContactFieldsTest()
         {
-            SearchResponse<Field> fields = _client.ContactFields.Search("*", 1, 1);
+            SearchResponse<Field> fields = _client.CustomObjectFields.Search(1, "*", 1, 1);
             Assert.AreEqual(1, fields.total);
         }
     }

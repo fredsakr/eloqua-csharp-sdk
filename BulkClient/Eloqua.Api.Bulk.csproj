@@ -44,13 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication\BasicAuthentication.cs" />
     <Compile Include="BaseClient.cs" />
     <Compile Include="BulkClient.cs" />
     <Compile Include="Clients\Contacts\ContactExportClient.cs" />
     <Compile Include="Clients\Contacts\ContactFieldClient.cs" />
     <Compile Include="Clients\Contacts\ContactFilterClient.cs" />
+    <Compile Include="Clients\Contacts\ContactImportClient.cs" />
+    <Compile Include="Clients\CustomObjects\CustomObjectClient.cs" />
+    <Compile Include="Clients\CustomObjects\CustomObjectExportClient.cs" />
+    <Compile Include="Clients\CustomObjects\CustomObjectImportClient.cs" />
     <Compile Include="Exception\ValidationException.cs" />
     <Compile Include="Models\Contacts\ContactFilter.cs" />
+    <Compile Include="Clients\CustomObjects\CustomObjectFieldClient.cs" />
+    <Compile Include="Models\CustomObjects\CustomObject.cs" />
+    <Compile Include="Models\CustomObjects\CustomObjectSearchResponse.cs" />
     <Compile Include="Models\Errors\ObjectKey.cs" />
     <Compile Include="Models\Errors\ObjectValidationError.cs" />
     <Compile Include="Models\Exports\Export.cs" />
@@ -58,6 +66,8 @@
     <Compile Include="Models\Exports\FilterRuleType.cs" />
     <Compile Include="Models\Field.cs" />
     <Compile Include="Models\IIdentifiable.cs" />
+    <Compile Include="Models\Imports\Import.cs" />
+    <Compile Include="Models\Imports\RuleType.cs" />
     <Compile Include="Models\ISearchable.cs" />
     <Compile Include="Models\Login\AccountInfo.cs" />
     <Compile Include="Models\Login\ApiAccount.cs" />
@@ -70,6 +80,7 @@
     <Compile Include="Models\Syncs\Sync.cs" />
     <Compile Include="Models\Syncs\SyncAction.cs" />
     <Compile Include="Models\Syncs\SyncActionType.cs" />
+    <Compile Include="Models\Syncs\SyncResult.cs" />
     <Compile Include="Models\Syncs\SyncStatusType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\RestObject.cs" />

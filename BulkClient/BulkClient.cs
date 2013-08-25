@@ -1,4 +1,5 @@
 ﻿using Eloqua.Api.Bulk.Clients.Contacts;
+using Eloqua.Api.Bulk.Clients.CustomObjects;
 using Eloqua.Api.Bulk.Models.Login;
 using RestSharp;
 
@@ -32,6 +33,21 @@ namespace Eloqua.Api.Bulk
         public ContactExportClient ContactExport
         {
             get { return new ContactExportClient(BaseClient);}
+        }
+
+        public ContactImportClient ContactImport
+        {
+            get { return new ContactImportClient(BaseClient); }
+        }
+
+        public CustomObjectFieldClient CustomObjectFields
+        {
+            get { return new CustomObjectFieldClient(BaseClient); }
+        }
+
+        public CustomObjectImportClient CustomObjectImport
+        {
+            get { return new CustomObjectImportClient(BaseClient); }
         }
     }
 }

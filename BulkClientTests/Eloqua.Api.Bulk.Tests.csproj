@@ -49,6 +49,7 @@
     <Compile Include="Contacts\ContactExportTests.cs" />
     <Compile Include="Contacts\ContactFieldTests.cs" />
     <Compile Include="Contacts\ContactFilterTests.cs" />
+    <Compile Include="CustomObjects\CustomObjectFieldTests.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
