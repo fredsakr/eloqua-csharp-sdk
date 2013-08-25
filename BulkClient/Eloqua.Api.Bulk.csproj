@@ -58,6 +58,8 @@
     <Compile Include="Clients\CustomObjects\CustomObjectClient.cs" />
     <Compile Include="Clients\CustomObjects\CustomObjectExportClient.cs" />
     <Compile Include="Clients\CustomObjects\CustomObjectImportClient.cs" />
+    <Compile Include="Clients\JsonDataClient.cs" />
+    <Compile Include="Clients\SyncClient.cs" />
     <Compile Include="Exception\ValidationException.cs" />
     <Compile Include="Models\Accounts\AccountFilter.cs" />
     <Compile Include="Models\Contacts\ContactFilter.cs" />

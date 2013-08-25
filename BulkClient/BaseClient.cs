@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using Eloqua.Api.Bulk.Clients;
+using RestSharp;
 using RestSharp.Deserializers;
 
 namespace Eloqua.Api.Bulk
@@ -29,6 +30,16 @@ namespace Eloqua.Api.Bulk
                 throw Validation.ResponseValidator.GetExceptionFromResponse(response);
             }
             return response.Data;
+        }
+
+        public SyncClient Syncs
+        {
+            get { return new SyncClient(this); }
+        }
+
+        public JsonDataClient JsonData
+        {
+            get { return new JsonDataClient(this); }
         }
     }
 }

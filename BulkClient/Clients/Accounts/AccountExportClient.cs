@@ -28,25 +28,12 @@ namespace Eloqua.Api.Bulk.Clients.Accounts
 
         public Sync CreateSync(Sync sync)
         {
-            var request = new RestRequest(Method.POST)
-            {
-                Resource = "/sync",
-                RequestFormat = DataFormat.Json
-            };
-            request.AddBody(sync);
-
-            return _client.Execute<Sync>(request);
+            return _client.Syncs.CreateSync(sync);
         }
 
-        public IRestResponse GetExportData(string exportUri)
+        public IRestResponse ExportData(string exportUri)
         {
-            var request = new RestRequest
-            {
-                Resource = exportUri + "/data",
-                RequestFormat = DataFormat.Json
-            };
-
-            return _client.Execute(request);
+            return _client.JsonData.ExportData(exportUri);
         }
     }
 }
