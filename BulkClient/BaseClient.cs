@@ -34,12 +34,14 @@ namespace Eloqua.Api.Bulk
 
         public SyncClient Syncs
         {
-            get { return new SyncClient(this); }
+            get { return _syncClient ?? (_syncClient = new SyncClient(this)); }
         }
+        private SyncClient _syncClient;
 
         public JsonDataClient JsonData
         {
-            get { return new JsonDataClient(this); }
+            get { return _jsonDataClient ?? (_jsonDataClient = new JsonDataClient(this)); }
         }
+        private JsonDataClient _jsonDataClient;
     }
 }
